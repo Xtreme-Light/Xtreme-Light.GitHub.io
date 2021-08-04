@@ -1,11 +1,7 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+title: '第一篇博客'
+date: '2021-04-08'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
-
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Next.js是一个基于jamstack思路使用react实现的前端框架，可以把动态内容静态化，通过next export 命令，来生成网站。这对于网络提速、SEO和分发都非常友好。  
+我正在使用这个框架，来搭建我的Github Page

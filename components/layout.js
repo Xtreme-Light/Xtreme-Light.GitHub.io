@@ -3,8 +3,8 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '11111'
-export const siteTitle = 'Next.js Sample Website'
+const name = '爆炒鱿鱼徐的博客网站'
+export const siteTitle = '爆炒鱿鱼徐的博客网站'
 
 export default function Layout({ children, home }) {
   return (
@@ -48,7 +48,7 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>← 返回主页</a>
           </Link>
         </div>
       )}
