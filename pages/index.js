@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getShortPostsData } from '../lib/posts'
+import { getShortPostsData, getIndexShowData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
 
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, tags }) {
   return (
     <Layout home>
       <Head>
@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
         <p>
           生活总是多姿多彩的，而互联网，提供了更大的平台~~~{' '}</p>
         <p> 感谢<a href="https://nextjs.org/learn">Next.js</a>.</p>
-        
+
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>文章列表</h2>
@@ -36,15 +36,18 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   const allPostsData = getShortPostsData()
+  const tags = getIndexShowData()
   return {
     props: {
-      allPostsData
+      allPostsData,
+      tags
     }
   }
 }
