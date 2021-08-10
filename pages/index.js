@@ -43,7 +43,7 @@ export default function Home({ allPostsData, tags }) {
 
 export async function getStaticProps() {
   const allPostsData = getShortPostsData()
-  const tags = getIndexShowData()
+  const tags = await getIndexShowData()
   return {
     props: {
       allPostsData,
